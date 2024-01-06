@@ -27,6 +27,6 @@ public class Number0028 {
 //
 //    }
     public static int strStrKMP(String s, String t) {
-
+        return 0;
     }
 }

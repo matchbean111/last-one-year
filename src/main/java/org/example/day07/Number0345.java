@@ -15,6 +15,7 @@ public class Number0345 {
                 }
             }
         }
+        return null;
     }
 
     private static boolean isVowels(char c){
@@ -27,5 +28,4 @@ public class Number0345 {
         return false;
     }
 
-    private static
 }
