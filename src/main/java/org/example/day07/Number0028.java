@@ -20,12 +20,7 @@ public class Number0028 {
         }
         return -1;
     }
-//    public static int strStr1(String haystack, String needle) {
-//        int n = haystack.length(), m = needle.length();
-//        char[] s = haystack.toCharArray(), p = needle.toCharArray();
-//
-//
-//    }
+
     public static int strStrKMP(String s, String t) {
         return 0;
     }

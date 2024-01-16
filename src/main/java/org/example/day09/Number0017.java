@@ -19,7 +19,7 @@ public class Number0017 {
     }
 
     public List<String> letterCombinations(String digits) {
-        if (digits == null || digits.length() == 0) {
+        if (digits == null || digits.isEmpty()) {
             return res;
         }
         //初始对应所有的数字，为了直接对应2-9，新增了两个无效的字符串""

@@ -1,7 +1,6 @@
 package org.example.day02;
 
 import java.util.ArrayDeque;
-import java.util.Deque;
 
 public class Number0844 {
     public static void main(String[] args) {

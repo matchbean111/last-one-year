@@ -20,12 +20,11 @@ public class Number0977 {
             if (lq > rq) {
                 arr[index] = lq;
                 l++;
-                index--;
             }else {
                 arr[index] = rq;
                 r--;
-                index--;
             }
+            index--;
         }
         return arr;
     }

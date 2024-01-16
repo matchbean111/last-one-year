@@ -8,7 +8,6 @@ public class Number0704 {
     }
 
     public static int search(int[] nums, int target) {
-        int len = nums.length;
         int low = 0;
         int high = nums.length - 1;
 

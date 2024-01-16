@@ -6,8 +6,8 @@ public class Number0239 {
     public static void main(String[] args) {
         int[] nums = {1, 3, -1, -3, 5, 3, 6, 7};
         int k = 3;
-        int[] ints = maxSlidingWindow(nums, k);
-        for (int anInt : ints) {
+        int[] ins = maxSlidingWindow(nums, k);
+        for (int anInt : ins) {
             System.out.println(anInt);
         }
     }

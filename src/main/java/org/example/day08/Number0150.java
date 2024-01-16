@@ -11,7 +11,7 @@ public class Number0150 {
     }
 
     private static int evalRPN(String[] tokens) {
-        Deque<Integer> stack = new LinkedList();
+        Deque<Integer> stack = new LinkedList<>();
         for (String s : tokens) {
             if ("+".equals(s)) {        // leetcode 内置jdk的问题，不能使用==判断字符串是否相等
                 stack.push(stack.pop() + stack.pop());      // 注意 - 和/ 需要特殊处理

@@ -1,3 +1,3 @@
-# see how long will i keep this repo
+# see how long will I keep this repo
 
 ## 庆祝git成功连接

@@ -14,13 +14,13 @@ public class Test {
 
         System.out.println(12);
 
-        // test.level(root);
-        // List<Integer> list = test.rightSideView(root);
-        // for (Integer i : list) {
-        //     System.out.printf("%c ", i);
-        // }
-        // test.preorderNonRecr(root);
-        // test.inorderNonRecr(root);
+         test.level(root);
+         List<Integer> list = test.rightSideView(root);
+         for (Integer i : list) {
+             System.out.printf("%c ", i);
+         }
+         test.preorderNonRecr(root);
+         test.inorderNonRecr(root);
         test.level(root);
 
     }

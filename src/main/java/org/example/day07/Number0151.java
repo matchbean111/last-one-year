@@ -8,8 +8,8 @@ public class Number0151 {
     }
 
     /**
-     * 学到了while（left <right){
-     *     while (left < right && somethinge ...){
+     * 学到了while(left <right){
+     *     while (left < right && something ...){
      *         继续搜索
      *     }
      *     some other code

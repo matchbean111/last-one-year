@@ -37,7 +37,7 @@ public class Number0076 {
 
             System.out.printf("left = %d, right = %d ", l, r);
             System.out.printf("window str = %s\n", new String(s.getBytes(),l,r-l));
-            System.out.printf("");
+
 
             while (valid == need.size()) {
                 System.out.println("hgfd");
