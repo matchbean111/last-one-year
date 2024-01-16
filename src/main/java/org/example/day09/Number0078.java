@@ -1,17 +1,17 @@
 package org.example.day09;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Number0077 {
+public class Number0078 {
     List<List<Integer>> res = new LinkedList<>();
     // 记录回溯算法的递归路径
     LinkedList<Integer> track = new LinkedList<>();
 
     public static void main(String[] args) {
-        Number0077 t = new Number0077();
-        List<List<Integer>> list = t.combine(4, 2);
+        Number0078 t = new Number0078();
+        int[] nums = {1,2,3};
+        List<List<Integer>> list = t.subsets(nums);
         for (List<Integer> is : list) {
             for (int i = 0; i < is.size(); i++) {
                 System.out.printf("%d ", is.get(i));
@@ -20,26 +20,22 @@ public class Number0077 {
         }
     }
 
-    public List<List<Integer>> combine(int n, int k) {
-        backtrack(1, n, k);
+    public List<List<Integer>> subsets(int[] nums) {
+        backtrack(0, nums);
         return res;
     }
 
-    void backtrack(int start, int n, int k) {
+    void backtrack(int start, int[] n) {
         // base case
-        if (k == track.size()) {
-            // 遍历到了第 k 层，收集当前节点的值
-            res.add(track);
-            return;
-        }
+        res.add(new LinkedList<>(track));
 
         // 回溯算法标准框架
-        for (int i = start; i <= (n - track.size()) + 1; i++) {
-            if (n - i + 1 + track.size() < k) break;
+        for (int i = start; i < n.length; i++) {
+
             // 选择
-            track.addLast(i);
+            track.addLast(n[i]);
             // 通过 start 参数控制树枝的遍历，避免产生重复的子集
-            backtrack(i + 1, n, k);
+            backtrack(i + 1, n);
             // 撤销选择
             track.removeLast();
         }
