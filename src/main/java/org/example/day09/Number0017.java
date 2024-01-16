@@ -1,40 +1,52 @@
 package org.example.day09;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 public class Number0017 {
-    List<String> res = new LinkedList<>();
+    List<String> res = new ArrayList<>();
     // 记录回溯算法的递归路径
-    LinkedList<Integer> track = new LinkedList<>();
+
 
     public static void main(String[] args) {
         Number0017 t = new Number0017();
         String digits = "23";
         List<String> list = t.letterCombinations(digits);
-        for (String is : list) {
-            System.out.printf("%d ", is.get(i));
+        for (String string : list) {
+            System.out.println(string);
         }
     }
 
     public List<String> letterCombinations(String digits) {
-        backtrack(0, null);
+        if (digits == null || digits.length() == 0) {
+            return res;
+        }
+        //初始对应所有的数字，为了直接对应2-9，新增了两个无效的字符串""
+        String[] numString = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+        backtrack(digits,numString,0);
         return res;
     }
 
-    void backtrack(int start, int[] n) {
+    StringBuilder sb = new StringBuilder();
+
+    void backtrack(String digits, String[] numString, int num) {
         // base case
-        res.add(new LinkedList<>(track));
+        if (num == digits.length()) {
+            res.add(sb.toString());
+            return;
+        }
+
+        String str = numString[digits.charAt(num) - '0'];
 
         // 回溯算法标准框架
-        for (int i = start; i < n.length; i++) {
-
-            // 选择
-            track.addLast(n[i]);
-            // 通过 start 参数控制树枝的遍历，避免产生重复的子集
-            backtrack(i + 1, n);
-            // 撤销选择
-            track.removeLast();
+        for (int i = 0; i < str.length(); i++) {
+           sb.append(str.charAt(i)) ;
+           backtrack(digits, numString, num + 1);
+           sb.deleteCharAt(sb.length()-1);
         }
+       
     }
+        
+    
 }
