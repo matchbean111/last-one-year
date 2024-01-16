@@ -1,6 +1,5 @@
 package org.example.day09;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -29,7 +28,7 @@ public class Number0077 {
         // base case
         if (k == track.size()) {
             // 遍历到了第 k 层，收集当前节点的值
-            res.add(track);
+            res.add(new LinkedList<>(track));
             return;
         }
 

@@ -15,10 +15,13 @@ public class Test {
         System.out.println(12);
 
         // test.level(root);
-        List<Integer> list = test.rightSideView(root);
-        for (Integer i : list) {
-            System.out.printf("%c ", i);
-        }
+        // List<Integer> list = test.rightSideView(root);
+        // for (Integer i : list) {
+        //     System.out.printf("%c ", i);
+        // }
+        // test.preorderNonRecr(root);
+        // test.inorderNonRecr(root);
+        test.level(root);
 
     }
 
@@ -107,19 +110,50 @@ public class Test {
     }
 
     void level(TreeNode root) {
-        if (root != null) {
-            post(root.left);
-            System.out.printf("%c ", root.val);
-            post(root.right);
-        }
         if (root == null) {
-            System.out.printf("NULL ");
             return;
+        }
+        LinkedList<TreeNode> stk = new LinkedList<>();
+        stk.push(root);
+        while (!stk.isEmpty()) {
+            TreeNode node = stk.pop();
+            System.out.printf("%c ", node.val);
+            
+            if (node.left != null) stk.push(node.left);
+            if (node.right != null) stk.push(node.right);
         }
     }
 
     void preorderNonRecr(TreeNode root) {
-        
+        if (root == null) {
+            return;
+        }
+        LinkedList<TreeNode> stk = new LinkedList<>();
+        stk.push(root);
+        while (!stk.isEmpty()) {
+            TreeNode node = stk.pop();
+            System.out.printf("%c ", node.val);
+            if (node.right != null) stk.push(node.right);
+            if (node.left != null) stk.push(node.left);
+        }
+    }
+
+    void inorderNonRecr(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        LinkedList<TreeNode> stk = new LinkedList<>();
+        TreeNode node = root;
+        while (node != null || !stk.isEmpty()) {
+            if (node != null) {
+                stk.push(node);
+                node = node.left;
+            } else {
+                node = stk.pop();
+                System.out.printf("%c ", node.val);
+                node = node.right;
+            }
+        }
     }
 
     public class TreeNode {
