@@ -8,6 +8,9 @@ public class Number0209 {
         int[] nums = {2,3,1,2,4,3};
         int ret = minSubArrayLen1(target, nums);
         System.out.println(ret);
+        System.out.println();
+        int ret = minSubArrayLen(target, nums);
+        System.out.println(ret);
     }
 
     private static int minSubArrayLen1(int target, int[] nums) {

@@ -17,6 +17,6 @@ public class Number0026 {
             }
             fast++;
         }
-        return slow;
+        return slow + 1;
     }
 }
