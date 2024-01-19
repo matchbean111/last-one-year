@@ -1,7 +1,5 @@
 package org.example.day03;
 
-import java.util.HashMap;
-
 public class Number0209 {
     public static void main(String[] args) {
         int target = 7;
@@ -9,8 +7,8 @@ public class Number0209 {
         int ret = minSubArrayLen1(target, nums);
         System.out.println(ret);
         System.out.println();
-        int ret = minSubArrayLen(target, nums);
-        System.out.println(ret);
+        int ret1 = minSubArrayLen(target, nums);
+        System.out.println(ret1);
     }
 
     private static int minSubArrayLen1(int target, int[] nums) {

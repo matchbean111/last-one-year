@@ -1,10 +1,8 @@
 package org.example;
 
-import java.util.ArrayList;
-
 public class Main {
     public static void main(String[] args) {
-        System.out.println(f(3));
+        System.out.println(f(35));
     }
 
     static int f(int n) {
