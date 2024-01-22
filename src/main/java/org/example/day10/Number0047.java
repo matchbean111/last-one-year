@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Number0042 {
+public class Number0047 {
     List<List<Integer>> res = new ArrayList<>();
     List<Integer> track = new ArrayList<>();
 
     public static void main(String[] args) {
-        Number0042 t = new Number0042(); 
+        Number0047 t = new Number0047(); 
         int[] nums = {2,2,4,2};
         int target = 4;
         List<List<Integer>> list = t.permuteUnique(nums, target);

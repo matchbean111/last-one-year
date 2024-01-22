@@ -1,7 +1,6 @@
 package org.example.day09;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class Number0017 {
