@@ -43,7 +43,7 @@ public class Number0131 {
     }
 
     private boolean isPalindrome(String s, int start, int end) {
-        // TODO Auto-generated method stub
+        
         for (int i = start, j = end; i < j; i++, j--) {
             if (s.charAt(i) != s.charAt(j)) {
                 return false;

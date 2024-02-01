@@ -8,7 +8,6 @@ public class AAA {
         ArrayList<AAA> list = new ArrayList<>();
         int count=0;
 
-
         try {
             while (true) {
                 list.add(new AAA());
