@@ -4,23 +4,29 @@ import java.util.Arrays;
 
 public class Number0455 {
     public static void main(String[] args) {
-        int[] g = {1,2,3};
-        int[] s = {1,1};
+        int[] g = {10,9,8,7};
+        int[] s = {5,6,7,8};
 
         Number0455 t = new Number0455();
         int max = t.findContentChildren(g, s);
         System.out.println(max);
     }
 
+    /**
+     *
+     * @param g 胃口值
+     * @param s 饼干值
+     * @return
+     */
     public int findContentChildren(int[] g, int[] s) {
         Arrays.sort(g);
         Arrays.sort(s);
-        int index = s.length - 1; // 饼干数组的下标
+        int index = 0; // 胃口数组的下标
         int result = 0;
-        for (int i = g.length - 1; i >= 0; i--) { // 遍历胃口
-            if (index >= 0 && s[index] >= g[i]) { // 遍历饼干
+        for (int i = 0; i < s.length && index < g.length; i++) {
+            if (s[i] >= g[index]) {
                 result++;
-                index--;
+                index++;
             }
         }
         return result;
