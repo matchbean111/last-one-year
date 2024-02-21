@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -21,6 +22,16 @@ class MyFirstJUnitJupiterTests {
         boolean containsKey = map.containsKey(5);
         System.out.println(containsKey);
 
+    }
+
+    @Test
+    public void testArray() {
+        int[] nums = {10, 9, 2, 5, 3, 7, 101, 18};
+        int[] dp = new int[nums.length];
+        Arrays.fill(dp,1);
+        for (int i : dp) {
+            System.out.println(i);
+        }
     }
 
     @Test
