@@ -11,6 +11,7 @@ public class Number0034 {
         System.out.println();
     }
 
+    // 一般人写不出这个代码，带着递归的
     public static int[] searchRange(int[] nums, int target) {
         int leftIdx = binarySearch(nums, target, true);
         int rightIdx = binarySearch(nums, target, false) - 1;
