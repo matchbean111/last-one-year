@@ -2,9 +2,9 @@ package org.example.f20.day14;
 
 public class BagProblem {
     public static void main(String[] args) {
-        int[] weight = {1, 3, 4};
-        int[] value = {15, 20, 30};
-        int bagSize = 4;
+        int[] weight = {2,3,4,5,8};
+        int[] value = {3,4,1,6,10};
+        int bagSize = 8;
         testWeightBagProblem(weight, value, bagSize);
     }
 
@@ -37,13 +37,6 @@ public class BagProblem {
                      */
                     dp[i][j] = dp[i - 1][j];
                 } else {
-                    /**
-                     * 当前背包的容量可以放下物品i
-                     * 那么此时分两种情况：
-                     *    1、不放物品i
-                     *    2、放物品i
-                     * 比较这两种情况下，哪种背包中物品的最大价值最大
-                     */
                     dp[i][j] = Math.max(dp[i - 1][j], dp[i - 1][j - weight[i]] + value[i]);
                 }
             }
