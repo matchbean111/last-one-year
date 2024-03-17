@@ -1,5 +1,7 @@
 package org.example.f20.day18;
 
+import java.util.Arrays;
+
 public class Number0494 {
     public static void main(String[] args) {
         Number0494 t = new Number0494();
@@ -9,7 +11,8 @@ public class Number0494 {
         System.out.println(targetSumWays);
     }
     public int findTargetSumWays(int[] nums, int target) {
-
+        System.out.println(Arrays.toString(nums));
+        System.out.println(target);
         // TODO
 
 
