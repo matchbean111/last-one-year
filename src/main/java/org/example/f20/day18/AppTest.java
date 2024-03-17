@@ -1,7 +1,5 @@
 package org.example.f20.day18;
 
-import java.util.Arrays;
-
 public class AppTest {
     public static void main(String[] args) {
         int[] weight = {1, 3, 4};
@@ -19,11 +17,11 @@ public class AppTest {
         System.out.printf("wLen = %d, bagWeight = %d\n",wLen,bagWeight);
         //遍历顺序：先遍历物品，再遍历背包容量
         for (int i = 0; i < wLen; i++){
-            for (int j = bagWeight; j >= weight[i]; j--){
+            for (int j = weight[i]; j <= bagWeight; j++){
                 dp[j] = Math.max(dp[j], dp[j - weight[i]] + value[i]);
             }
-            for (int k = 0; k < dp.length; k++) {
-                System.out.printf("%d,",dp[k]);
+            for (int j : dp) {
+                System.out.printf("%d,", j);
             }
             System.out.println();
         }
