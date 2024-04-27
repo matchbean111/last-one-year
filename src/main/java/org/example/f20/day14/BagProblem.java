@@ -2,8 +2,8 @@ package org.example.f20.day14;
 
 public class BagProblem {
     public static void main(String[] args) {
-        int[] weight = {2,3,4,5,8};
-        int[] value = {3,4,1,6,10};
+        int[] weight = {2, 3, 4, 5, 8};
+        int[] value = {3, 4, 1, 6, 10};
         int bagSize = 8;
         testWeightBagProblem(weight, value, bagSize);
     }

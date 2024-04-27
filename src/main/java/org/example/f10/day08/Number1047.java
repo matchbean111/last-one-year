@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 public class Number1047 {
     public static void main(String[] args) {
-        String s= "abbaca";
+        String s = "abbaca";
         System.out.println(removeDuplicates(s));
 
     }
@@ -17,11 +17,11 @@ public class Number1047 {
 
         for (int i = 0; i < n; i++) {
             char ch = s.charAt(i);
-            if (stack.isEmpty()){
+            if (stack.isEmpty()) {
                 stack.push(ch);
-            }else {
+            } else {
                 char p = stack.getFirst();
-                if (p==ch){
+                if (p == ch) {
                     stack.pop();
                 } else {
                     stack.push(ch);

@@ -1,11 +1,10 @@
 package org.example.f10.day08;
 
-import java.util.Deque;
 import java.util.LinkedList;
 
 public class Number0020 {
     public static void main(String[] args) {
-                String s = "{()[]]{}";
+        String s = "{()[]]{}";
         System.out.println(isValid(s));
     }
 
@@ -17,9 +16,9 @@ public class Number0020 {
 
         for (int i = 0; i < n; i++) {
             char ch = s.charAt(i);
-            if (stack.isEmpty()){
+            if (stack.isEmpty()) {
                 stack.push(ch);
-            }else {
+            } else {
                 char p = stack.getFirst();
                 if (p == '(' && ch - p == 1) {
                     stack.pop();

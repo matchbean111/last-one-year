@@ -1,6 +1,8 @@
 package org.example.f10.day08;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.PriorityQueue;
 
 public class Number0347 {
     public static void main(String[] args) {

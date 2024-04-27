@@ -15,7 +15,7 @@ public class Number0077 {
             for (int i = 0; i < is.size(); i++) {
                 System.out.printf("%d ", is.get(i));
             }
-            System.out.printf("\n");
+            System.out.print("\n");
         }
     }
 

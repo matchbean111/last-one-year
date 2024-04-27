@@ -1,7 +1,6 @@
 package org.example.f10.day10;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Number0039 {
@@ -10,21 +9,21 @@ public class Number0039 {
 
 
     public static void main(String[] args) {
-        Number0039 t = new Number0039(); 
-        int[] nums = {2,3,6,7};
+        Number0039 t = new Number0039();
+        int[] nums = {2, 3, 6, 7};
         int target = 7;
         List<List<Integer>> list = t.combinationSum(nums, target);
         for (List<Integer> is : list) {
-            for (int i = 0; i < is.size(); i++) {
-                System.out.printf("%d ", is.get(i));
+            for (Integer integer : is) {
+                System.out.printf("%d ", integer);
             }
-            System.out.printf("\n");
+            System.out.print("\n");
         }
     }
 
     public List<List<Integer>> combinationSum(int[] nums, int target) {
 
-        backtrack(nums,0, target,0);
+        backtrack(nums, 0, target, 0);
         return res;
     }
 
@@ -36,8 +35,8 @@ public class Number0039 {
             res.add(new ArrayList<>(track));
             return;
         }
-        
-       
+
+
         for (int i = start; i < nums.length; i++) {
             // if (i > start && nums[i] == nums[i-1]) {
             //     continue;
@@ -46,7 +45,7 @@ public class Number0039 {
             sum += nums[i];
             backtrack(nums, i, target, sum);
             sum -= nums[i];
-            track.remove(track.size()-1);
+            track.remove(track.size() - 1);
         }
     }
 

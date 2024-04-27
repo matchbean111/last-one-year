@@ -8,8 +8,8 @@ import java.util.Arrays;
 public class Number0455 {
     public static void main(String[] args) {
         Number0455 t = new Number0455();
-        int[] g = {10,9,8,7};
-        int[] s= {5,6,7,8};
+        int[] g = {10, 9, 8, 7};
+        int[] s = {5, 6, 7, 8};
         int r = t.findContentChildren(g, s);
         System.out.println(r);
     }
@@ -28,7 +28,7 @@ public class Number0455 {
         }
         return res;
     }
-    
+
 }
 
     

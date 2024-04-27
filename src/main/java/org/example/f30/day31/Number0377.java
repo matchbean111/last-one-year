@@ -2,11 +2,10 @@ package org.example.f30.day31;
 
 import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.List;
 
 public class Number0377 {
     public static void main(String[] args) {
-        int[] nums= {1,2,3};
+        int[] nums = {1, 2, 3};
         int target = 4;
         int i = new Solution().combinationSum4(nums, target);
         System.out.println(i);

@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class Number0455 {
     public static void main(String[] args) {
-        int[] g = {10,9,8,7};
-        int[] s = {5,6,7,8};
+        int[] g = {10, 9, 8, 7};
+        int[] s = {5, 6, 7, 8};
 
         Number0455 t = new Number0455();
         int max = t.findContentChildren(g, s);
@@ -13,7 +13,6 @@ public class Number0455 {
     }
 
     /**
-     *
      * @param g 胃口值
      * @param s 饼干值
      * @return

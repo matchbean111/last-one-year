@@ -4,15 +4,15 @@ public class RightSpinStr {
     public static void main(String[] args) {
         String s = "abcdefg";
         int k = 2;
-        String r = rightSpin(s,k);
+        String r = rightSpin(s, k);
         System.out.println(r);
     }
 
     static String rightSpin(String s, int k) {
         char[] cs = s.toCharArray();
-        reverse(cs, 0, cs.length-1);
-        reverse(cs,0,k-1);
-        reverse(cs,k,cs.length-1);
+        reverse(cs, 0, cs.length - 1);
+        reverse(cs, 0, k - 1);
+        reverse(cs, k, cs.length - 1);
         return new String(cs);
     }
 

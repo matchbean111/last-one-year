@@ -8,14 +8,14 @@ public class Number0131 {
     List<String> track = new ArrayList<>();
 
     public static void main(String[] args) {
-        Number0131 t = new Number0131(); 
+        Number0131 t = new Number0131();
         String s = "aaba";
         List<List<String>> list = t.partition(s);
         for (List<String> is : list) {
             for (int i = 0; i < is.size(); i++) {
                 System.out.printf("%s ", is.get(i));
             }
-            System.out.printf("\n");
+            System.out.print("\n");
         }
     }
 
@@ -28,29 +28,29 @@ public class Number0131 {
         if (start >= s.length()) {
             res.add(new ArrayList<>(track));
         }
-       
+
         for (int i = start; i < s.length(); i++) {
-            if (!isPalindrome(s,start, i)) {
+            if (!isPalindrome(s, start, i)) {
                 continue;
             }
-            String str = s.substring(start, i+1);
+            String str = s.substring(start, i + 1);
             track.add(str);
 
-            backtrack(s, i+1);
-           
+            backtrack(s, i + 1);
+
             track.remove(str);
         }
     }
 
     private boolean isPalindrome(String s, int start, int end) {
-        
+
         for (int i = start, j = end; i < j; i++, j--) {
             if (s.charAt(i) != s.charAt(j)) {
                 return false;
             }
         }
         return true;
-        
+
     }
 
 

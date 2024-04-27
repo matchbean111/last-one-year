@@ -14,13 +14,13 @@ public class Test {
 
         System.out.println(12);
 
-         test.level(root);
-         List<Integer> list = test.rightSideView(root);
-         for (Integer i : list) {
-             System.out.printf("%c ", i);
-         }
-         test.preorderNonRecr(root);
-         test.inorderNonRecr(root);
+        test.level(root);
+        List<Integer> list = test.rightSideView(root);
+        for (Integer i : list) {
+            System.out.printf("%c ", i);
+        }
+        test.preorderNonRecr(root);
+        test.inorderNonRecr(root);
         test.level(root);
 
     }
@@ -52,7 +52,7 @@ public class Test {
     }
 
     TreeNode build(char[] preorder, int preStart, int preEnd,
-            char[] inorder, int inStart, int inEnd) {
+                   char[] inorder, int inStart, int inEnd) {
         // 前序位置，寻找左右子树的索引
         if (preStart > preEnd) {
             return null;
@@ -78,8 +78,8 @@ public class Test {
 
     List<Integer> post(TreeNode root) {
         class Pair {
-            TreeNode u;
-            int cnt;
+            final TreeNode u;
+            final int cnt;
 
             public Pair(TreeNode u, int cnt) {
                 this.u = u;
@@ -118,7 +118,7 @@ public class Test {
         while (!stk.isEmpty()) {
             TreeNode node = stk.pop();
             System.out.printf("%c ", node.val);
-            
+
             if (node.left != null) stk.push(node.left);
             if (node.right != null) stk.push(node.right);
         }

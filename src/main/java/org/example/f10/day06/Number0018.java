@@ -1,8 +1,8 @@
 package org.example.f10.day06;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.ArrayList;
 
 public class Number0018 {
     public static void main(String[] args) {

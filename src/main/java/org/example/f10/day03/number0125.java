@@ -13,7 +13,7 @@ public class number0125 {
         while (fast < cs.length) {
             char c = cs[fast];
             boolean satisfy = c >= 'a' && c <= 'z' ||
-                    c >= 'A' && c <= 'Z' || c >= '0' && c <= '9';
+                              c >= 'A' && c <= 'Z' || c >= '0' && c <= '9';
             if (satisfy) {
                 cs[slow] = cs[fast];
                 slow++;
@@ -25,7 +25,7 @@ public class number0125 {
         int l = 0;
         int r = s.length() - 1;
         while (l <= r) {
-            if (s.charAt(l) != s.charAt(r)){
+            if (s.charAt(l) != s.charAt(r)) {
                 return false;
             }
             l++;

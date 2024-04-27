@@ -1,7 +1,5 @@
 package org.example.f20.day12;
 
-import java.util.HashMap;
-
 public class Number0860 {
     public static void main(String[] args) {
         int[] bills = {5, 5, 5, 10, 20};
@@ -10,9 +8,9 @@ public class Number0860 {
     }
 
     public boolean lemonadeChange(int[] bills) {
-        int five=0;
-        int ten=0;
-        int twenty=0;
+        int five = 0;
+        int ten = 0;
+        int twenty = 0;
         for (int bill : bills) {
             if (bill == 5) {
                 five++;
@@ -32,7 +30,7 @@ public class Number0860 {
                 } else if (five >= 3) {
                     five -= 3;
                     twenty++;
-                }else {
+                } else {
                     return false;
                 }
             }

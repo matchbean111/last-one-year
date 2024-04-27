@@ -9,7 +9,7 @@ public class Number0076 {
         String t = "cae";
         String r = minWindow(s, t);
         System.out.println(r);
-        int[] nusm = {1,2};
+        int[] nusm = {1, 2};
 
     }
 
@@ -36,7 +36,7 @@ public class Number0076 {
             }
 
             System.out.printf("left = %d, right = %d ", l, r);
-            System.out.printf("window str = %s\n", new String(s.getBytes(),l,r-l));
+            System.out.printf("window str = %s\n", new String(s.getBytes(), l, r - l));
 
 
             while (valid == need.size()) {
@@ -45,7 +45,7 @@ public class Number0076 {
                     start = l;
                     ans = r - l;
                 }
-                char d= s.charAt(l);
+                char d = s.charAt(l);
                 l++;
 
                 if (need.containsKey(d)) {
@@ -55,7 +55,7 @@ public class Number0076 {
                 }
             }
         }
-        return ans == Integer.MAX_VALUE ? "" : s.substring(start, start+ans);
+        return ans == Integer.MAX_VALUE ? "" : s.substring(start, start + ans);
     }
 
     private static String minWindowBrute(String s, String t) {

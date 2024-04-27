@@ -6,7 +6,7 @@ import static java.lang.Math.max;
 
 public class Number0135 {
     public static void main(String[] args) {
-        int[] ratings = {1,3,4,5,2};
+        int[] ratings = {1, 3, 4, 5, 2};
         Number0135 t = new Number0135();
         System.out.println(t.candy(ratings));
     }
@@ -22,7 +22,7 @@ public class Number0135 {
         }
 
         for (int i = ratings.length - 2; i >= 0; i--) {
-            if (ratings[i] > ratings[i + 1] ) {
+            if (ratings[i] > ratings[i + 1]) {
                 candies[i] = max(candies[i], candies[i + 1] + 1);
             }
         }

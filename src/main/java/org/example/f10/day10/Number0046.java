@@ -8,14 +8,14 @@ public class Number0046 {
     List<Integer> track = new ArrayList<>();
 
     public static void main(String[] args) {
-        Number0046 t = new Number0046(); 
-        int[] nums = {1,2,3,4,5,6,7,8};
+        Number0046 t = new Number0046();
+        int[] nums = {1, 2, 3, 4, 5, 6, 7, 8};
         List<List<Integer>> list = t.permute(nums);
         for (List<Integer> is : list) {
             for (int i = 0; i < is.size(); i++) {
                 System.out.printf("%d ", is.get(i));
             }
-            System.out.printf("\n");
+            System.out.print("\n");
         }
     }
 
@@ -29,7 +29,7 @@ public class Number0046 {
         if (track.size() == nums.length) {
             res.add(new ArrayList<>(track));
         }
-       
+
 
         for (int i = 0; i < nums.length; i++) {
             if (used[i]) {
@@ -39,7 +39,7 @@ public class Number0046 {
             used[i] = true;
             backtrack(nums, used);
             used[i] = false;
-            track.remove(track.size()-1);
+            track.remove(track.size() - 1);
         }
     }
 

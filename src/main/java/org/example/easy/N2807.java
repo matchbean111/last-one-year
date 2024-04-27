@@ -5,14 +5,13 @@ public class N2807 {
 
     }
 
-    public static ListNode insertGreatestCommonDivisors(ListNode head) {
+    private static ListNode insertGreatestCommonDivisors(ListNode head) {
         ListNode p = head;
         while (p.next != null) {
             int a = p.val;
             int b = p.next.val;
-            ListNode node = new ListNode(gcd(a,b), p.next);
 
-            p.next = node;
+            p.next = new ListNode(gcd(a, b), p.next);
             p = p.next.next;
         }
         return head;

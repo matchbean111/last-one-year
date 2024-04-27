@@ -8,7 +8,7 @@ public class Number0832 {
         flipAndInvertImage(arr);
         for (int[] ints : arr) {
             for (int anInt : ints) {
-                System.out.print(anInt+ " ");
+                System.out.print(anInt + " ");
             }
             System.out.println();
         }

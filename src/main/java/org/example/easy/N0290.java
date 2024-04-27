@@ -6,7 +6,6 @@ public class N0290 {
     }
 
 
-
     public static boolean wordPattern(String pattern, String s) {
         return false;
     }

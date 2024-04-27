@@ -7,7 +7,7 @@ public class Number0054 {
     List<List<String>> res = new ArrayList<>();
 
     public static void main(String[] args) {
-        Number0054 t = new Number0054(); 
+        Number0054 t = new Number0054();
 
     }
 
@@ -33,10 +33,10 @@ public class Number0054 {
         int n = board.get(row).length();
 
         for (int col = 0; col < n; col++) {
-            if (!isValid(board,row,col)) {
+            if (!isValid(board, row, col)) {
                 continue;
             }
-           
+
             StringBuilder sb = new StringBuilder(board.get(row));
             sb.setCharAt(col, 'Q');
             board.set(row, sb.toString());

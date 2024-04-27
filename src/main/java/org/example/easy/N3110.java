@@ -6,7 +6,7 @@ public class N3110 {
         System.out.println(scoreOfString(s));
     }
 
-    public  static int scoreOfString(String s) {
+    public static int scoreOfString(String s) {
         int score = 0;
         for (int i = 1; i < s.length(); i++) {
             score += Math.abs(s.charAt(i) - s.charAt(i - 1));

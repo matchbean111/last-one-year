@@ -13,7 +13,7 @@ public class Number0453 {
 
     public int minMoves(int[] nums) {
         // if all equals: last state is sum % nums.length = 1 last state 2 is 
-        
+
         int res = 0;
         int minimum = Arrays.stream(nums).min().getAsInt();
         for (int num : nums) {

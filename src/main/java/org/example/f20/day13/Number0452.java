@@ -1,7 +1,6 @@
 package org.example.f20.day13;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Comparator;
 
 public class Number0452 {
@@ -9,7 +8,7 @@ public class Number0452 {
         Number0452 t = new Number0452();
 
 //        int[][] points = {{3,9},{7,12},{3,8},{6,8},{9,10},{2,9},{0,9},{3,9},{0,6},{2,8}};
-        int[][] points = {{10,16}, {2, 8}, {7,12}, {1,6}};
+        int[][] points = {{10, 16}, {2, 8}, {7, 12}, {1, 6}};
         Arrays.sort(points, Comparator.comparingInt(o -> o[1]));
         for (int[] point : points) {
             System.out.printf("%d %d\n", point[0], point[1]);
@@ -35,6 +34,7 @@ public class Number0452 {
 
     /**
      * 找到两条线段的重合区域
+     *
      * @param a 开始的
      * @param b 结束的
      * @return 重合的区间
@@ -48,7 +48,7 @@ public class Number0452 {
             return new int[]{b[0], a[1]};
         } else {
             int left = Math.max(a[0], b[0]);
-            return new int[] {left, b[1]};
+            return new int[]{left, b[1]};
         }
     }
 }

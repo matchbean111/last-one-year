@@ -2,7 +2,7 @@ package org.example.f10.day02;
 
 public class Number0026 {
     public static void main(String[] args) {
-        int[] nums = {1, 1, 2,2,2,3,3,4};
+        int[] nums = {1, 1, 2, 2, 2, 3, 3, 4};
         System.out.println(removeDuplicates(nums));
     }
 

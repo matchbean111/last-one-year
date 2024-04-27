@@ -8,20 +8,20 @@ public class Number0491 {
     List<Integer> track = new ArrayList<>();
 
     public static void main(String[] args) {
-        Number0491 t = new Number0491(); 
-        int[] nums = {4,6,7,7};
+        Number0491 t = new Number0491();
+        int[] nums = {4, 6, 7, 7};
         List<List<Integer>> list = t.subsetsWithDup(nums);
         for (List<Integer> is : list) {
             for (int i = 0; i < is.size(); i++) {
                 System.out.printf("%d ", is.get(i));
             }
-            System.out.printf("\n");
+            System.out.print("\n");
         }
     }
 
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         // Arrays.sort(nums);
-        backtrack(nums,0);
+        backtrack(nums, 0);
         return res;
     }
 
@@ -30,19 +30,19 @@ public class Number0491 {
             res.add(new ArrayList<>(track));
             return;
         }
-        
-       
+
+
         for (int i = start; i < nums.length; i++) {
-            if (i > start && nums[i] == nums[i-1]) {
+            if (i > start && nums[i] == nums[i - 1]) {
                 continue;
             }
             if (nums[i] >= nums[start]) {
                 track.add(nums[i]);
-                backtrack(nums, i+1);
-                
+                backtrack(nums, i + 1);
+
             }
-            track.remove(track.size()-1);
-           
+            track.remove(track.size() - 1);
+
         }
     }
 

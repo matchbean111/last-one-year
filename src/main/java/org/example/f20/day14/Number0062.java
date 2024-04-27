@@ -7,6 +7,17 @@ public class Number0062 {
         System.out.println(i);
     }
 
+    static void llll(int[][] arr) {
+        int m = arr.length;
+        int n = arr[0].length;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.printf("\t%d ", arr[i][j]);
+            }
+            System.out.print("\n");
+        }
+    }
+
     public int uniquePaths(int m, int n) {
         int[][] dp = new int[m][n];
         for (int i = 0; i < m; i++) {
@@ -18,25 +29,14 @@ public class Number0062 {
 
         for (int i = 1; i < m; i++) {
             for (int j = 1; j < n; j++) {
-                dp[i][j] = dp[i-1][j] + dp[i][j-1];
+                dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
             }
         }
         print(dp);
-        return dp[m-1][n-1];
+        return dp[m - 1][n - 1];
     }
 
     public void print(int[][] arr) {
         llll(arr);
-    }
-
-    static void llll(int[][] arr) {
-        int m = arr.length;
-        int n = arr[0].length;
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                System.out.printf("\t%d ", arr[i][j]);
-            }
-            System.out.printf("\n");
-        }
     }
 }

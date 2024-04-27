@@ -10,13 +10,13 @@ public class Number0078 {
 
     public static void main(String[] args) {
         Number0078 t = new Number0078();
-        int[] nums = {1,2};
+        int[] nums = {1, 2};
         List<List<Integer>> list = t.subsets(nums);
         for (List<Integer> is : list) {
             for (int i = 0; i < is.size(); i++) {
                 System.out.printf("%d, ", is.get(i));
             }
-            System.out.printf("\n");
+            System.out.print("\n");
         }
     }
 

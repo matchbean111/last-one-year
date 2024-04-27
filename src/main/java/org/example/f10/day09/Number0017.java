@@ -6,7 +6,7 @@ import java.util.List;
 public class Number0017 {
     List<String> res = new ArrayList<>();
     // 记录回溯算法的递归路径
-
+    StringBuilder sb = new StringBuilder();
 
     public static void main(String[] args) {
         Number0017 t = new Number0017();
@@ -23,11 +23,9 @@ public class Number0017 {
         }
         //初始对应所有的数字，为了直接对应2-9，新增了两个无效的字符串""
         String[] numString = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
-        backtrack(digits,numString,0);
+        backtrack(digits, numString, 0);
         return res;
     }
-
-    StringBuilder sb = new StringBuilder();
 
     void backtrack(String digits, String[] numString, int num) {
         // base case
@@ -40,12 +38,12 @@ public class Number0017 {
 
         // 回溯算法标准框架
         for (int i = 0; i < str.length(); i++) {
-           sb.append(str.charAt(i)) ;
-           backtrack(digits, numString, num + 1);
-           sb.deleteCharAt(sb.length()-1);
+            sb.append(str.charAt(i));
+            backtrack(digits, numString, num + 1);
+            sb.deleteCharAt(sb.length() - 1);
         }
-       
+
     }
-        
-    
+
+
 }

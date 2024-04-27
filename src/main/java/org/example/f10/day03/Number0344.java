@@ -2,7 +2,7 @@ package org.example.f10.day03;
 
 public class Number0344 {
     public static void main(String[] args) {
-        char[] s= {'h','e','l','l','o'};
+        char[] s = {'h', 'e', 'l', 'l', 'o'};
         reverseString(s);
     }
 

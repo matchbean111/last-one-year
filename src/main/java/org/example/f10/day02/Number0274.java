@@ -20,6 +20,6 @@ public class Number0274 {
             if (citations[i] > h) h++;
             else break;
         }
-        return h-1;
+        return h - 1;
     }
 }

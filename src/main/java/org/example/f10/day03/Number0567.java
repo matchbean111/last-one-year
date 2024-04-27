@@ -7,7 +7,7 @@ public class Number0567 {
     public static void main(String[] args) {
         String s1 = "ab";
         String s2 = "eidbaooo";
-        boolean b= checkInclusion(s1,s2);
+        boolean b = checkInclusion(s1, s2);
         System.out.println(b);
     }
 
@@ -24,7 +24,7 @@ public class Number0567 {
         int valid = 0;
 
         while (r < n) {
-            char c= s2.charAt(r);
+            char c = s2.charAt(r);
             r++;
             if (need.containsKey(c)) {
                 window.put(c, window.getOrDefault(c, 0) + 1);
@@ -32,7 +32,7 @@ public class Number0567 {
             }
 
             if (r - l >= s1.length()) {
-                if (valid == s1.length()){
+                if (valid == s1.length()) {
                     return true;
                 }
                 char d = s2.charAt(l);

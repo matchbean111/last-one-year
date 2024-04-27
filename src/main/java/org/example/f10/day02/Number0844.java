@@ -4,10 +4,10 @@ import java.util.ArrayDeque;
 
 public class Number0844 {
     public static void main(String[] args) {
-        String s= "a##c";
+        String s = "a##c";
         String t = "#a#c";
 
-        System.out.println(backspaceCompare(s,t));
+        System.out.println(backspaceCompare(s, t));
     }
 
     private static boolean backspaceCompare(String s, String t) {
@@ -21,9 +21,9 @@ public class Number0844 {
         char[] cs = t.toCharArray();
         ArrayDeque<Character> deque = new ArrayDeque<>();
         for (int i = 0; i < cs.length; i++) {
-            if (cs[i] == '#'){
+            if (cs[i] == '#') {
                 deque.poll();
-            }else {
+            } else {
                 deque.push(cs[i]);
             }
         }

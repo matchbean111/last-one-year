@@ -6,7 +6,7 @@ public class N0009 {
     }
 
 
-    public  static boolean isPalindrome(int x) {
+    public static boolean isPalindrome(int x) {
         //边界判断
         if (x < 0) return false;
         int div = 1;

@@ -9,7 +9,7 @@ public class Number0035 {
 
     public static int searchInsert(int[] nums, int target) {
         int low = 0;
-        int high = nums.length -1;
+        int high = nums.length - 1;
         while (low <= high) {
             int mid = low + (high - low) / 2;
             if (target == nums[mid]) {
@@ -17,11 +17,10 @@ public class Number0035 {
             } else if (target < nums[mid]) {
                 high = mid - 1;
             } else {
-                low = mid +1;
+                low = mid + 1;
             }
         }
         return high + 1;
-
 
 
     }

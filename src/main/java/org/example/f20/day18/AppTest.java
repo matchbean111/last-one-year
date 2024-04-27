@@ -8,16 +8,16 @@ public class AppTest {
         testWeightBagProblem(weight, value, bagWight);
     }
 
-    public static void testWeightBagProblem(int[] weight, int[] value, int bagWeight){
+    public static void testWeightBagProblem(int[] weight, int[] value, int bagWeight) {
 
         int wLen = weight.length;
         //定义dp数组：dp[j]表示背包容量为j时，能获得的最大价值
         int[] dp = new int[bagWeight + 1];
 
-        System.out.printf("wLen = %d, bagWeight = %d\n",wLen,bagWeight);
+        System.out.printf("wLen = %d, bagWeight = %d\n", wLen, bagWeight);
         //遍历顺序：先遍历物品，再遍历背包容量
-        for (int i = 0; i < wLen; i++){
-            for (int j = weight[i]; j <= bagWeight; j++){
+        for (int i = 0; i < wLen; i++) {
+            for (int j = weight[i]; j <= bagWeight; j++) {
                 dp[j] = Math.max(dp[j], dp[j - weight[i]] + value[i]);
             }
             for (int j : dp) {
@@ -26,7 +26,7 @@ public class AppTest {
             System.out.println();
         }
         //打印dp数组
-        for (int j = 0; j <= bagWeight; j++){
+        for (int j = 0; j <= bagWeight; j++) {
             System.out.print(dp[j] + " ");
         }
     }

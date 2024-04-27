@@ -9,15 +9,15 @@ public class Number0047 {
     List<Integer> track = new ArrayList<>();
 
     public static void main(String[] args) {
-        Number0047 t = new Number0047(); 
-        int[] nums = {2,2,4,2};
+        Number0047 t = new Number0047();
+        int[] nums = {2, 2, 4, 2};
         int target = 4;
         List<List<Integer>> list = t.permuteUnique(nums, target);
         for (List<Integer> is : list) {
             for (int i = 0; i < is.size(); i++) {
                 System.out.printf("%d ", is.get(i));
             }
-            System.out.printf("\n");
+            System.out.print("\n");
         }
     }
 
@@ -29,23 +29,23 @@ public class Number0047 {
     }
 
     void backtrack(int[] nums, boolean[] used) {
-        if (track.size() == nums.length){
+        if (track.size() == nums.length) {
             res.add(new ArrayList<>(track));
         }
-        
-       
+
+
         for (int i = 0; i < nums.length; i++) {
             if (used[i]) {
                 continue;
             }
-            if (i > 0 && nums[i] == nums[i-1] && !used[i-1]){
+            if (i > 0 && nums[i] == nums[i - 1] && !used[i - 1]) {
                 continue;
             }
             track.add(nums[i]);
             used[i] = true;
             backtrack(nums, used);
             used[i] = false;
-            track.remove(track.size()-1);
+            track.remove(track.size() - 1);
         }
     }
 

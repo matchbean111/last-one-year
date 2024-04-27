@@ -11,11 +11,11 @@ public class Number0202 {
 
     public static boolean isHappy(int n) {
         Set<Integer> record = new HashSet<>();
-        while (n != 1 && !record.contains(n)){
+        while (n != 1 && !record.contains(n)) {
             record.add(n);
             n = getNextNumber(n);
         }
-        return n==1;
+        return n == 1;
     }
 
     private static int getNextNumber(int n) {

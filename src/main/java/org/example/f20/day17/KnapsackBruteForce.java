@@ -11,8 +11,8 @@ public class KnapsackBruteForce {
         int bagWeight = 8;
         int[] dp = new int[weights.length];
 
-        for(int i = 0; i < weights.length; i++) { // 遍历物品
-            for(int j = bagWeight; j >= weights[i]; j--) { // 遍历背包容量
+        for (int i = 0; i < weights.length; i++) { // 遍历物品
+            for (int j = bagWeight; j >= weights[i]; j--) { // 遍历背包容量
                 if (j >= weights.length) {
                     break;
                 }

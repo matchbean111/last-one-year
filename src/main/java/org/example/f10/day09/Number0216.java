@@ -15,13 +15,13 @@ public class Number0216 {
             for (int i = 0; i < is.size(); i++) {
                 System.out.printf("%d ", is.get(i));
             }
-            System.out.printf("\n");
+            System.out.print("\n");
         }
     }
 
     public List<List<Integer>> combinationSum3(int k, int n) {
-      
-        backtrack(n,k, 0, 1);
+
+        backtrack(n, k, 0, 1);
         return res;
     }
 
@@ -37,7 +37,7 @@ public class Number0216 {
         for (int i = start; i <= 9; i++) {
             sum += i;
             track.add(i);
-            backtrack(targetSum, k, sum, i+1);
+            backtrack(targetSum, k, sum, i + 1);
             track.removeLast();
             sum -= i;
         }

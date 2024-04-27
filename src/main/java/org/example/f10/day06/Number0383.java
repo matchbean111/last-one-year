@@ -4,7 +4,7 @@ public class Number0383 {
     public static void main(String[] args) {
         String ransomNote = "aa";
         String magazine = "";
-        System.out.println(canConstruct(ransomNote,magazine));
+        System.out.println(canConstruct(ransomNote, magazine));
     }
 
     public static boolean canConstruct(String ransomNote, String magazine) {
@@ -17,7 +17,7 @@ public class Number0383 {
         }
         for (char c : ransomNote.toCharArray()) {
             cnt[c - 'a']--;
-            if(cnt[c - 'a'] < 0) {
+            if (cnt[c - 'a'] < 0) {
                 return false;
             }
         }

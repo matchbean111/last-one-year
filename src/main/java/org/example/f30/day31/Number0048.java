@@ -24,22 +24,6 @@ public class Number0048 {
         }
     }
 
-    public void rotate1(int[][] matrix) {
-        int n = matrix.length;
-
-        for (int i = 0; i < n; i++) {
-            for (int j = i; j < n; j++) {
-                int temp = matrix[i][j];
-                matrix[i][j] = matrix[j][i];
-                matrix[j][i] = temp;
-            }
-        }
-
-        for (int[] row : matrix) {
-            reverse(row);
-        }
-    }
-
     void reverse(int[] arr) {
         int i = 0;
         int j = arr.length - 1;

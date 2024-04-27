@@ -10,7 +10,7 @@ public class TestBack {
 
     public static void main(String[] args) {
         TestBack t = new TestBack();
-        int[] nums = {1,2,3};
+        int[] nums = {1, 2, 3};
         t.subsets(nums);
     }
 

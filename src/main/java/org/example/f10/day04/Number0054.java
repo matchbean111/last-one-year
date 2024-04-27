@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Number0054 {
     public static void main(String[] args) {
-        int m = 3,n=3;
+        int m = 3, n = 3;
         int[][] matrix = new int[m][n];
 
         List<Integer> res = spiralOrder(matrix);

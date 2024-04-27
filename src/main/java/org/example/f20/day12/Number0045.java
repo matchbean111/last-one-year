@@ -3,7 +3,7 @@ package org.example.f20.day12;
 public class Number0045 {
     public static void main(String[] args) {
         Number0045 t = new Number0045();
-        int[] nums = {2,3,1,1,4};
+        int[] nums = {2, 3, 1, 1, 4};
         System.out.println(t.jump(nums));
     }
 
@@ -16,7 +16,7 @@ public class Number0045 {
             if (i == curReach) {
                 curReach = nextReach;
                 res++;
-                if (nextReach >= nums.length-1)break;
+                if (nextReach >= nums.length - 1) break;
             }
         }
         return res;

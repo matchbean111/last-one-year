@@ -1,6 +1,5 @@
 package org.example.f10.day06;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -9,7 +8,7 @@ public class Number0349 {
     public static void main(String[] args) {
         int[] arr1 = {1, 2, 2, 1};
         int[] arr2 = {2, 2};
-        int[] result = intersection(arr1,arr2);
+        int[] result = intersection(arr1, arr2);
         System.out.println(Arrays.toString(result));
     }
 
@@ -24,6 +23,6 @@ public class Number0349 {
                 set.add(j);
             }
         }
-        return set.stream().mapToInt(x->x).toArray();
+        return set.stream().mapToInt(x -> x).toArray();
     }
 }

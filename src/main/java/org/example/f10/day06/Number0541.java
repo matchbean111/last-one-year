@@ -12,10 +12,10 @@ public class Number0541 {
         int n = s.length();
         int index = n - (n % (2 * k));
         System.out.println("Index" + index);
-        for (int i = 0; i < index; i+=2*k) {
+        for (int i = 0; i < index; i += 2 * k) {
             int l = i;
-            int r = i +k-1;
-            while (l <r) {
+            int r = i + k - 1;
+            while (l < r) {
                 char temp = cs[l];
                 cs[l] = cs[r];
                 cs[r] = temp;
@@ -23,7 +23,7 @@ public class Number0541 {
                 r--;
             }
         }
-        if (n-index >= k) {
+        if (n - index >= k) {
             int l = index;
             int r = n - 2;
             while (l < r) {

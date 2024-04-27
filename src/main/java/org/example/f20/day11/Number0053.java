@@ -11,7 +11,7 @@ public class Number0053 {
         int maxValue = Integer.MIN_VALUE;
         int sum = 0;
 
-        for (int num: nums) {
+        for (int num : nums) {
             sum = sum > 0 ? sum + num : num;
             maxValue = Math.max(maxValue, sum);
         }

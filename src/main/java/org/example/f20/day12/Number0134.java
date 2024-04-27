@@ -3,8 +3,8 @@ package org.example.f20.day12;
 public class Number0134 {
     public static void main(String[] args) {
         Number0134 t = new Number0134();
-        int[] gas = {1,2,3,4,5};
-        int[] cost = {3,4,5,1,2};
+        int[] gas = {1, 2, 3, 4, 5};
+        int[] cost = {3, 4, 5, 1, 2};
         System.out.println(t.canCompleteCircuit(gas, cost));
     }
 
@@ -25,11 +25,11 @@ public class Number0134 {
                     break;
                 }
             }
-            if (curGas >= 0 ) {
+            if (curGas >= 0) {
                 res = start;
                 break;
             }
-            curGas=0;
+            curGas = 0;
 
         }
         return res == Integer.MAX_VALUE ? -1 : res;
@@ -39,7 +39,8 @@ public class Number0134 {
 
     /**
      * 贪心算法
-     * @param gas 油
+     *
+     * @param gas  油
      * @param cost 消耗
      * @return
      */

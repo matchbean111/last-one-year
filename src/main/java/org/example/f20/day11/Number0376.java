@@ -4,7 +4,7 @@ public class Number0376 {
     public static void main(String[] args) {
         Number0376 t = new Number0376();
 
-        int[] nums = {1,2,3,4,5,6,7,8,9};
+        int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 
         System.out.println(t.wiggleMaxLength(nums));
 
@@ -19,7 +19,7 @@ public class Number0376 {
         int prev = (nums[1] - nums[0]);
 
         for (int i = 2; i < len; i++) {
-            int cur = nums[i] - nums[i-1];
+            int cur = nums[i] - nums[i - 1];
             if (cur != 0 && overZero(cur) != overZero(prev)) {
                 res++;
                 prev = cur;
