@@ -7,12 +7,12 @@ import java.util.List;
 public class Number0039 {
     List<List<Integer>> res = new ArrayList<>();
     List<Integer> track = new ArrayList<>();
-    int trackSum=0;
+
 
     public static void main(String[] args) {
         Number0039 t = new Number0039(); 
-        int[] nums = {1,2,3};
-        int target = 3;
+        int[] nums = {2,3,6,7};
+        int target = 7;
         List<List<Integer>> list = t.combinationSum(nums, target);
         for (List<Integer> is : list) {
             for (int i = 0; i < is.size(); i++) {
@@ -23,16 +23,16 @@ public class Number0039 {
     }
 
     public List<List<Integer>> combinationSum(int[] nums, int target) {
-        Arrays.sort(nums);
-        backtrack(nums,0, target);
+
+        backtrack(nums,0, target,0);
         return res;
     }
 
-    void backtrack(int[] nums, int start, int target) {
-        if (trackSum > target) {
+    void backtrack(int[] nums, int start, int target, int sum) {
+        if (sum > target) {
             return;
         }
-        if (trackSum == target) {
+        if (sum == target) {
             res.add(new ArrayList<>(track));
             return;
         }
@@ -43,9 +43,9 @@ public class Number0039 {
             //     continue;
             // }
             track.add(nums[i]);
-            trackSum += nums[i];
-            backtrack(nums, i, target);
-            trackSum -= nums[i];
+            sum += nums[i];
+            backtrack(nums, i, target, sum);
+            sum -= nums[i];
             track.remove(track.size()-1);
         }
     }
