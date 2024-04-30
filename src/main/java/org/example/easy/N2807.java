@@ -2,7 +2,8 @@ package org.example.easy;
 
 public class N2807 {
     public static void main(String[] args) {
-
+        ListNode temp = new ListNode();
+        insertGreatestCommonDivisors(temp);
     }
 
     private static ListNode insertGreatestCommonDivisors(ListNode head) {
