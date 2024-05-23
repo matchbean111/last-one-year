@@ -10,6 +10,9 @@ public class Number0054 {
         int[][] matrix = new int[m][n];
 
         List<Integer> res = spiralOrder(matrix);
+        for (Integer res2 : res) {
+            System.out.println(res2);
+        }
     }
 
     private static List<Integer> spiralOrder(int[][] matrix) {

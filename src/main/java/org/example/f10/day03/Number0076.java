@@ -9,7 +9,7 @@ public class Number0076 {
         String t = "cae";
         String r = minWindow(s, t);
         System.out.println(r);
-        int[] nusm = {1, 2};
+        
 
     }
 
@@ -58,12 +58,12 @@ public class Number0076 {
         return ans == Integer.MAX_VALUE ? "" : s.substring(start, start + ans);
     }
 
-    private static String minWindowBrute(String s, String t) {
-        for (int i = 0; i < s.length(); i++) {
-            for (int j = i + 1; j < s.length(); j++) {
-                // 判断 s[i:j] 包含t所有字母
-            }
-        }
-        return null;
-    }
+    // private static String minWindowBrute(String s, String t) {
+    //     for (int i = 0; i < s.length(); i++) {
+    //         for (int j = i + 1; j < s.length(); j++) {
+    //             // 判断 s[i:j] 包含t所有字母
+    //         }
+    //     }
+    //     return null;
+    // }
 }

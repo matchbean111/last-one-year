@@ -19,7 +19,7 @@ public class Test {
         for (Integer i : list) {
             System.out.printf("%c ", i);
         }
-        test.preorderNonRecr(root);
+      
         test.inorderNonRecr(root);
         test.level(root);
 
@@ -76,38 +76,7 @@ public class Test {
         return root;
     }
 
-    List<Integer> post(TreeNode root) {
-        class Pair {
-            final TreeNode u;
-            final int cnt;
-
-            public Pair(TreeNode u, int cnt) {
-                this.u = u;
-                this.cnt = cnt;
-            }
-        }
-        List<Integer> res = new ArrayList<>();
-        Stack<Pair> stk = new Stack<>();
-        stk.push(new Pair(root, 0));
-        while (!stk.isEmpty()) {
-            Pair p = stk.peek();
-            stk.pop();
-
-            if (p.cnt == 0) {
-                stk.push(new Pair(root, 1));
-                if (root.left != null)
-                    stk.push(new Pair(root.left, 0));
-            } else if (p.cnt == 1) {
-                stk.push(new Pair(root, 2));
-                if (root.right != null)
-                    stk.push(new Pair(root.right, 0));
-            } else if (p.cnt == 2) {
-                res.add(root.val);
-            }
-        }
-
-        return res;
-    }
+    
 
     void level(TreeNode root) {
         if (root == null) {

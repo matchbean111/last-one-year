@@ -5,6 +5,12 @@ public class Number0059 {
         int n = 3;
 
         int[][] res = generateMatrix(n);
+        for (int[] its : res) {
+            for (int anInt : its) {
+                System.out.print(anInt + "\t ");
+            }
+            System.out.println();
+        }
     }
 
     private static int[][] generateMatrix(int n) {

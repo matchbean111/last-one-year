@@ -8,7 +8,7 @@ public class Number0054 {
 
     public static void main(String[] args) {
         Number0054 t = new Number0054();
-
+        t.solveNQueens(6);
     }
 
     public List<List<String>> solveNQueens(int n) {
@@ -48,7 +48,7 @@ public class Number0054 {
     }
 
     boolean isValid(List<String> board, int row, int col) {
-        int n = board.size();
+        
 
         return false;
     }
