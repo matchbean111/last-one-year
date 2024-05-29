@@ -1,27 +1,30 @@
 package org.example.f30.day32;
 
+import java.util.Arrays;
+
 public class Number0645 {
     public static void main(String[] args) {
-        Number0645 t = new Number0645();
-        int[] nums = {1,2,2,4};
-        for (int errorNum : t.findErrorNums(nums)) {
-            System.out.println(errorNum);
-        }
+//        Number0645 t = new Number0645();
+//        int[] nums = { 1, 1 };
+//        for (int errorNum : t.findErrorNums(nums)) {
+//            System.out.println(errorNum);
+//        }
 
     }
 
     public int[] findErrorNums(int[] nums) {
-        int n = nums.length;
-        int sum = 0;
-        for (int num : nums) {
-            sum += num;
-        }
+//        int n = nums.length;
+//        int trueSum = Arrays.stream(nums).sum();
+//        int idealSum = n * (n + 1) / 2;
+//        for (int i = 0; i < n; i++) {
+//            if (i + 1 != nums[i]) {
+//                // 大的复制多了, res[0] 是被重复了的数， res[1] 是丢失的数
+//                if (trueSum > idealSum) {
+//
+//                }
+//            }
+//        }
 
-        int origin = n * (n + 1) / 2;
-        if (sum > origin) {
-            return new int[]{ sum - origin + 1, sum - origin + 2};
-        } else {
-            return new int[]{ origin - sum , origin - sum + 1};
-        }
+        return  null;
     }
 }
