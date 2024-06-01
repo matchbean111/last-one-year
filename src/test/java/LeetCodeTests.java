@@ -5,14 +5,14 @@ import java.util.PriorityQueue;
 class LeetCodeTests {
     @Test
     public void transferBrackets() {
-        String originStr = "items = [[\"phone\",\"blue\",\"pixel\"],[\"computer\",\"silver\",\"lenovo\"],[\"phone\",\"gold\",\"iphone\"]], ruleKey = \"color\", ruleValue = \"silver\"";
+        String originStr = "img = [[1,1,1],[1,0,1],[1,1,1]]";
         String res = bracket(originStr);
         System.out.println(res);
     }
 
     @Test
     public void bitTest() {
-        System.out.printf("%", 0b0101 ^ 0b0010);
+        System.out.printf("%x", 0b0101 ^ 0b0010);
         System.out.println(0 ^ 0);
     }
 
@@ -33,10 +33,58 @@ class LeetCodeTests {
 
     @Test
     public void testArraySelfHash() {
-        int[] nums = {4, 1, 5, 6, 8, 3, 2, 7};
+        int[] nums = { 4, 1, 5, 6, 8, 3, 2, 7 };
         for (int num : nums) {
-            System.out.println(nums[num -1]);
+            System.out.println(nums[num - 1]);
         }
+    }
+
+    @Test
+    public void testPrevMatrix() {
+        int[][] matrix = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+        int m = matrix.length;
+        int n = matrix[0].length;
+        int[][] prevMatrix = new int[m + 1][n + 1];
+        for (int[] value : matrix) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(value[j] + "\t ");
+            }
+            System.out.println();
+        }
+        System.out.println("============================");
+        for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= n; j++) {
+                prevMatrix[i][j] = prevMatrix[i - 1][j] + prevMatrix[i][j - 1] - prevMatrix[i - 1][j - 1]
+                        + matrix[i - 1][j - 1];
+            }
+        }
+
+        for (int[] ints : prevMatrix) {
+            for (int j = 0; j < prevMatrix[0].length; j++) {
+                System.out.print(ints[j] + "\t ");
+            }
+            System.out.println();
+        }
+
+        System.out.println(prevMatrix[2][2] - prevMatrix[1][2]);
+    }
+
+    @Test
+    public void testTriple() {
+        int limit = 3;
+        int n = 3;
+        int count = 0;
+        for (int i = 0; i < limit; i++) {
+            for (int j = n - i; j < limit; j++) {
+                for (int k = n-i-j; k < limit && k >= 0; k--) {
+
+                        System.out.printf("(%d, %d, %d)\n", i, j, k);
+                        count++;
+
+                }
+            }
+        }
+        System.out.println(count);
     }
 
     private String bracket(String str) {
