@@ -3,7 +3,7 @@ package org.example.f30.day35;
 public class Number2903 {
     public static void main(String[] args) {
         Number2903 t = new Number2903();
-        int[] nums = {5,1,4,1};
+        int[] nums = {5, 1, 4, 1};
         int indexDifference = 2, valueDifference = 4;
         int[] indices = t.findIndices(nums, indexDifference, valueDifference);
         System.out.println(indices[0] + " " + indices[1]);
@@ -39,7 +39,7 @@ public class Number2903 {
                 minIdx = i;
             }
             if (nums[maxIdx] - nums[j] >= valueDifference) {
-                return new int[] {maxIdx, j};
+                return new int[]{maxIdx, j};
             }
             if (nums[j] - nums[minIdx] >= valueDifference) {
                 return new int[]{minIdx, j};
@@ -47,7 +47,7 @@ public class Number2903 {
         }
 
 
-        return new int[] {-1,-1};
+        return new int[]{-1, -1};
 
     }
 }

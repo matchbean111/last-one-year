@@ -5,7 +5,7 @@ import java.util.LinkedList;
 public class Number1535 {
     public static void main(String[] args) {
         Number1535 t = new Number1535();
-        int[] arr = { 2, 1, 3, 5, 4, 6, 7 };
+        int[] arr = {2, 1, 3, 5, 4, 6, 7};
         int k = 2;
         int winner = t.getWinner(arr, k);
         System.out.println(winner);

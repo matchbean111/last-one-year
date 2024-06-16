@@ -1,7 +1,6 @@
 package org.example.easy;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class N2859 {
@@ -13,10 +12,11 @@ public class N2859 {
         nums.add(1);
         nums.add(5);
         nums.add(2);
-        
-        
+
+
         int res = t.sumIndicesWithKSetBits(nums, 1);
-        System.out.println(res);;
+        System.out.println(res);
+        ;
     }
 
     public int sumIndicesWithKSetBits(List<Integer> nums, int k) {
@@ -24,8 +24,8 @@ public class N2859 {
         for (int i = 0; i < nums.size(); i++) {
             if (Integer.bitCount(i) == k) {
                 System.out.println(Integer
-                .bitCount(nums.get(i)) + " " + nums.get(i));
-                ans = ans +nums.get(i);
+                                           .bitCount(nums.get(i)) + " " + nums.get(i));
+                ans = ans + nums.get(i);
             }
         }
         return ans;

@@ -3,7 +3,7 @@ package org.example.f30.day38;
 public class Number2965 {
     public static void main(String[] args) {
         Number2965 t = new Number2965();
-        int[][] grid = { { 1, 3 }, { 2, 2 } };
+        int[][] grid = {{1, 3}, {2, 2}};
         for (int missingAndRepeatedValue : t.findMissingAndRepeatedValues(grid)) {
             System.out.println(missingAndRepeatedValue);
         }

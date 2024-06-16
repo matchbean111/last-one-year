@@ -1,13 +1,12 @@
 package org.example.f30.day36;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 public class Number0448 {
     public static void main(String[] args) {
         Number0448 t = new Number0448();
-        int[] nums = {4,3,2,7,8,2,3,1};
+        int[] nums = {4, 3, 2, 7, 8, 2, 3, 1};
         t.findDisappearedNumbers(nums);
     }
 

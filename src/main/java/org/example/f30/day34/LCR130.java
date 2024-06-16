@@ -1,6 +1,8 @@
 package org.example.f30.day34;
 
 public class LCR130 {
+    int res = 0;
+
     public static void main(String[] args) {
         LCR130 t = new LCR130();
         int m = 40;
@@ -12,12 +14,10 @@ public class LCR130 {
 
     public int wardrobeFinishing(int m, int n, int cnt) {
         boolean[][] visited = new boolean[m][n];
-        dfs(m,n,cnt, 0,0,visited);
+        dfs(m, n, cnt, 0, 0, visited);
 
         return res;
     }
-
-    int res = 0;
 
     public void dfs(int m, int n, int cnt, int x, int y, boolean[][] visited) {
         if (x < 0 || y < 0 || x >= m || y >= n) {
@@ -35,9 +35,9 @@ public class LCR130 {
         res++;
         visited[x][y] = true;
 
-        dfs(m,n,cnt,x+1,y,visited);
-        dfs(m,n,cnt,x,y+1,visited);
-        dfs(m,n,cnt,x-1,y,visited);
-        dfs(m,n,cnt,x,y-1,visited);
+        dfs(m, n, cnt, x + 1, y, visited);
+        dfs(m, n, cnt, x, y + 1, visited);
+        dfs(m, n, cnt, x - 1, y, visited);
+        dfs(m, n, cnt, x, y - 1, visited);
     }
 }

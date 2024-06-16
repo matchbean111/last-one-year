@@ -1,7 +1,5 @@
 package org.example.f30.day32;
 
-import java.util.Arrays;
-
 public class Number0645 {
     public static void main(String[] args) {
 //        Number0645 t = new Number0645();
@@ -25,6 +23,6 @@ public class Number0645 {
 //            }
 //        }
 
-        return  null;
+        return null;
     }
 }

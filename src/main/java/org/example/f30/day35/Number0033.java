@@ -2,7 +2,7 @@ package org.example.f30.day35;
 
 public class Number0033 {
     public static void main(String[] args) {
-        int[] nums = { 4, 5, 6, 7, 0, 1, 2 };
+        int[] nums = {4, 5, 6, 7, 0, 1, 2};
         int target = 0;
         Number0033 t = new Number0033();
         int search = t.search(nums, target);

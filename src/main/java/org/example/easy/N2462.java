@@ -5,9 +5,9 @@ import java.util.PriorityQueue;
 public class N2462 {
     public static void main(String[] args) {
         N2462 t = new N2462();
-        int[] cost = {17,12,10,2,7,2,11,20,8};
-        int k =     3;
-        int candidates=4;
+        int[] cost = {17, 12, 10, 2, 7, 2, 11, 20, 8};
+        int k = 3;
+        int candidates = 4;
         t.totalCost(cost, k, candidates);
     }
 

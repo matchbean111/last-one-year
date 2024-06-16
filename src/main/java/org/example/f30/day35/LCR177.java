@@ -2,7 +2,7 @@ package org.example.f30.day35;
 
 public class LCR177 {
     public static void main(String[] args) {
-        int[] sockets = { 4, 5, 2, 4 };
+        int[] sockets = {4, 5, 2, 4};
         LCR177 t = new LCR177();
         int[] sockCollocation = t.sockCollocation(sockets);
         System.out.println(sockCollocation[0]);
@@ -12,7 +12,7 @@ public class LCR177 {
     /**
      * 位运算 技巧：
      * 0 &
-     * 
+     *
      * @param sockets 袜子编号
      * @return 撞色的一组
      */
@@ -34,6 +34,6 @@ public class LCR177 {
                 b ^= n;
             }
         }
-        return new int[] { a, b };
+        return new int[]{a, b};
     }
 }

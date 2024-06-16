@@ -2,7 +2,7 @@ package org.example.f30.day38;
 
 public class Number0485 {
     public static void main(String[] args) {
-        int[] nums = {1,0,1,1,0,1};
+        int[] nums = {1, 0, 1, 1, 0, 1};
         Number0485 t = new Number0485();
         int maxConsecutiveOnes = t.findMaxConsecutiveOnes(nums);
         System.out.println(maxConsecutiveOnes);

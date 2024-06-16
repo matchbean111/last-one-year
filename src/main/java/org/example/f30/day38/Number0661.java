@@ -55,8 +55,8 @@ public class Number0661 {
             for (int j = 0; j < n; j++) {
                 int a = max(0, i - 1), b = max(0, j - 1);
                 int c = min(m - 1, i + 1), d = min(n - 1, j + 1);
-                int cnt = (c-a+1) * (d-b+1);
-                int tot= sum[c+1][d+1] - sum[a][d+1] - sum[c+1][b] + sum[a][b];
+                int cnt = (c - a + 1) * (d - b + 1);
+                int tot = sum[c + 1][d + 1] - sum[a][d + 1] - sum[c + 1][b] + sum[a][b];
                 result[i][j] = tot / cnt;
             }
         }

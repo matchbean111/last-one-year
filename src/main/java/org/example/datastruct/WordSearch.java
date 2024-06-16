@@ -26,7 +26,7 @@ public class WordSearch {
         }
 
         if (row < 0 || row >= board.length || col < 0 || col >= board[0].length
-                || board[row][col] != word.charAt(index)) {
+            || board[row][col] != word.charAt(index)) {
             return false;
         }
 
@@ -34,9 +34,9 @@ public class WordSearch {
         board[row][col] = '#'; // mark the cell as visited
 
         boolean found = dfs(board, word, row + 1, col, index + 1) ||
-                dfs(board, word, row - 1, col, index + 1) ||
-                dfs(board, word, row, col + 1, index + 1) ||
-                dfs(board, word, row, col - 1, index + 1);
+                        dfs(board, word, row - 1, col, index + 1) ||
+                        dfs(board, word, row, col + 1, index + 1) ||
+                        dfs(board, word, row, col - 1, index + 1);
 
         board[row][col] = temp; // restore the cell
 
@@ -45,9 +45,9 @@ public class WordSearch {
 
     public static void main(String[] args) {
         char[][] board = {
-                { 'A', 'B', 'C', 'E' },
-                { 'S', 'F', 'C', 'S' },
-                { 'A', 'D', 'E', 'E' }
+                {'A', 'B', 'C', 'E'},
+                {'S', 'F', 'C', 'S'},
+                {'A', 'D', 'E', 'E'}
         };
 
         String word1 = "ABCCED";

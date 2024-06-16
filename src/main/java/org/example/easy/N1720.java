@@ -2,7 +2,7 @@ package org.example.easy;
 
 public class N1720 {
     public static void main(String[] args) {
-        int[] encoded = {1,2,3};
+        int[] encoded = {1, 2, 3};
         int first = 1;
         N1720 t = new N1720();
         for (int i : t.decode(encoded, first)) {

@@ -8,6 +8,7 @@ public class N2194 {
     }
 
     public List<String> cellsInRange(String s) {
+
         return null;
     }
 }

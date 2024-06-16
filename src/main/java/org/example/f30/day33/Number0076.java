@@ -25,15 +25,15 @@ public class Number0076 {
             // 更新数据
             if (need.containsKey(c)) {
                 window.put(c, window.getOrDefault(c, 0) + 1);
-                if (window.get(c) .equals(need.get(c))) {
+                if (window.get(c).equals(need.get(c))) {
                     valid++;
                 }
             }
-            
+
             while (valid == need.size()) {
                 if (right - left < len) {
-                     start = left;
-                     len = right - left;
+                    start = left;
+                    len = right - left;
                 }
                 char d = s.charAt(left);
 
@@ -43,7 +43,7 @@ public class Number0076 {
                     if (window.get(d).equals(need.get(d))) {
                         valid--;
                     }
-                    window.put(d, window.get(d) -1 );
+                    window.put(d, window.get(d) - 1);
                 }
             }
         }

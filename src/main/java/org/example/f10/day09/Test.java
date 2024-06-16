@@ -19,7 +19,7 @@ public class Test {
         for (Integer i : list) {
             System.out.printf("%c ", i);
         }
-      
+
         test.inorderNonRecr(root);
         test.level(root);
 
@@ -76,7 +76,6 @@ public class Test {
         return root;
     }
 
-    
 
     void level(TreeNode root) {
         if (root == null) {

@@ -1,7 +1,6 @@
 package org.example.datastruct;
 
 import java.util.ArrayDeque;
-import java.util.Queue;
 
 public class BFS {
     public static void main(String[] args) {
@@ -35,7 +34,7 @@ public class BFS {
         dfs(root.left);
         dfs(root.right);
 
-        
+
     }
 }
 

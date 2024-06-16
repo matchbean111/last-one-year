@@ -1,7 +1,6 @@
 package org.example.f30.day35;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 
 public class Number0697 {
@@ -20,7 +19,7 @@ public class Number0697 {
                 map.get(nums[i])[0]++;
                 map.get(nums[i])[2] = i;
             } else {
-                map.put(nums[i],new int[]{1,i,i,});
+                map.put(nums[i], new int[]{1, i, i,});
             }
         }
 

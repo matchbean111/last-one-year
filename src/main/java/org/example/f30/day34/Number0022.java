@@ -10,6 +10,7 @@ public class Number0022 {
 
     /**
      * 括号生成
+     *
      * @param n 共有多少对
      * @return 答案
      */
@@ -17,7 +18,7 @@ public class Number0022 {
         if (n == 0) return new ArrayList<>();
         List<String> res = new ArrayList<>();
         StringBuilder track = new StringBuilder();
-        backtrack(n,n,track, res);
+        backtrack(n, n, track, res);
         return res;
     }
 

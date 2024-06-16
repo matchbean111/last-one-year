@@ -2,7 +2,7 @@ package org.example.f30.day38;
 
 public class Number0495 {
     public static void main(String[] args) {
-        int[] timeSeries = {1,4};
+        int[] timeSeries = {1, 4};
         int duration = 2;
         Number0495 t = new Number0495();
         int poisonedDuration = t.findPoisonedDuration(timeSeries, duration);

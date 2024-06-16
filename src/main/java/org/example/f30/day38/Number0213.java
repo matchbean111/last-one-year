@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Number0213 {
     public static void main(String[] args) {
         Number0213 t = new Number0213();
-        int[] nums = { 1,2,3,1 };
+        int[] nums = {1, 2, 3, 1};
         int rob = t.rob(nums);
         System.out.println(rob);
     }
@@ -72,7 +72,7 @@ public class Number0213 {
         }
         res3 = dp[n - 2];
         System.out.printf("%d %d %d\n", res1, res2, res3);
-        return getMax(res1,res2,res3);
+        return getMax(res1, res2, res3);
     }
 
     private int getMax(int a, int b, int c) {

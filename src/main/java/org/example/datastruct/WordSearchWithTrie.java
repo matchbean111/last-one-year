@@ -112,21 +112,21 @@ public class WordSearchWithTrie {
 
         visited[row][col] = true;
         boolean found = dfs(board, visited, trie, word, row + 1, col) ||
-                dfs(board, visited, trie, word, row - 1, col) ||
-                dfs(board, visited, trie, word, row, col + 1) ||
-                dfs(board, visited, trie, word, row, col - 1);
+                        dfs(board, visited, trie, word, row - 1, col) ||
+                        dfs(board, visited, trie, word, row, col + 1) ||
+                        dfs(board, visited, trie, word, row, col - 1);
         visited[row][col] = false;
         return found;
     }
 
     public static void main(String[] args) {
         char[][] board = {
-                { 'A', 'B', 'C', 'E' },
-                { 'S', 'F', 'C', 'S' },
-                { 'A', 'D', 'E', 'E' }
+                {'A', 'B', 'C', 'E'},
+                {'S', 'F', 'C', 'S'},
+                {'A', 'D', 'E', 'E'}
         };
 
-        String[] words = { "ABCCED", "SEE", "ABCB" };
+        String[] words = {"ABCCED", "SEE", "ABCB"};
 
         System.out.println("Word \"ABCCED\" exists: " + exist(board, words));
         System.out.println("Word \"SEE\" exists: " + exist(board, words));

@@ -7,6 +7,6 @@ public class N2396 {
     }
 
     public boolean isStrictlyPalindromic(int n) {
-        return  false;
+        return false;
     }
 }

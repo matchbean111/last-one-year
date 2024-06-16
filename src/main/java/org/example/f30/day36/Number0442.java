@@ -1,12 +1,11 @@
 package org.example.f30.day36;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 public class Number0442 {
     public static void main(String[] args) {
-        int[] nums = {4,3,2,7,8,2,3,1};
+        int[] nums = {4, 3, 2, 7, 8, 2, 3, 1};
         Number0442 t = new Number0442();
         t.findDuplicates(nums);
     }

@@ -16,19 +16,11 @@ public class Number0498 {
         int[] res = new int[m * n];
         int start = 0;
         int i = 0, j = 0;
-        res[start++] = mat[i][j];
-        while (start < m * n) {
-            while (j >= 0) {
-                res[start] = mat[i++][j--];
-                start++;
-            }
-            j++;
-            while (i >= 0) {
-                res[start] = mat[i--][j++];
-                start++;
-            }
-            i++;
-        }
+
+//        while (start < m * n) {
+//
+//            for (int i = )
+//        }
         return res;
     }
 }

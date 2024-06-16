@@ -9,7 +9,7 @@ public class Number0076 {
         String t = "cae";
         String r = minWindow(s, t);
         System.out.println(r);
-        
+
 
     }
 

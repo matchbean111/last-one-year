@@ -2,7 +2,7 @@ package org.example.easy;
 
 public class N0643 {
     public static void main(String[] args) {
-        int[] nums = { 1,12,-5,-6,50,3 };
+        int[] nums = {1, 12, -5, -6, 50, 3};
         int k = 4;
         N0643 t = new N0643();
         double maxAverage = t.findMaxAverage(nums, k);

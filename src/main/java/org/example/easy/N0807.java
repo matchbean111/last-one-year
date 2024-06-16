@@ -2,11 +2,11 @@ package org.example.easy;
 
 public class N0807 {
     public static void main(String[] args) {
-        int[][] grid = {{3,0,8,4},{2,4,5,7},{9,2,6,3},{0,3,1,0}};
+        int[][] grid = {{3, 0, 8, 4}, {2, 4, 5, 7}, {9, 2, 6, 3}, {0, 3, 1, 0}};
         N0807 t = new N0807();
         int res = t.maxIncreaseKeepingSkyline(grid);
         System.out.println(res);
-        
+
     }
 
     public int maxIncreaseKeepingSkyline(int[][] grid) {
@@ -26,10 +26,9 @@ public class N0807 {
             for (int j = 0; j < n; j++) {
                 res += (Math.min(rowMax[i], colMax[j]) - grid[i][j]);
             }
-        } 
+        }
         return res;
     }
 
- 
 
 }

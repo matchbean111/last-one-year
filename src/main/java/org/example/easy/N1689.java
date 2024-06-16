@@ -8,6 +8,6 @@ public class N1689 {
     }
 
     public int minPartitions(String n) {
-        return n.length()-1;
+        return n.length() - 1;
     }
 }

@@ -10,9 +10,10 @@ public class Number2028 {
 
     /**
      * 找出缺失的观测数据
+     *
      * @param rolls m次观测数据
-     * @param mean m+n 次的平均值
-     * @param n n次观测
+     * @param mean  m+n 次的平均值
+     * @param n     n次观测
      * @return 返回 n次的观测数据
      */
     public int[] missingRolls(int[] rolls, int mean, int n) {

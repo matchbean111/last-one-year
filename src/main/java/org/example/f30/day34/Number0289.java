@@ -2,7 +2,7 @@ package org.example.f30.day34;
 
 public class Number0289 {
     public static void main(String[] args) {
-        int[][] board = {{0,1,0},{0,0,1},{1,1,1},{0,0,0}};
+        int[][] board = {{0, 1, 0}, {0, 0, 1}, {1, 1, 1}, {0, 0, 0}};
 
     }
 
@@ -32,7 +32,7 @@ public class Number0289 {
                             int c = (col + neighbors[j]);
 
                             if ((r < rows && r >= 0) && (c < cols && c >= 0) && (newBoard[r][c]) == 1) {
-                                liveNeighbors+=1;
+                                liveNeighbors += 1;
                             }
                         }
                     }

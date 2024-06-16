@@ -3,7 +3,7 @@ package org.example.f30.day38;
 public class Number0198 {
     public static void main(String[] args) {
         Number0198 t = new Number0198();
-        int[] nums = { 2, 7, 9, 3, 1 };
+        int[] nums = {2, 7, 9, 3, 1};
         int rob = t.rob(nums);
         System.out.println(rob);
     }

@@ -3,11 +3,11 @@ package org.example.f10.day10;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Number0054 {
+public class Number0051 {
     List<List<String>> res = new ArrayList<>();
 
     public static void main(String[] args) {
-        Number0054 t = new Number0054();
+        Number0051 t = new Number0051();
         t.solveNQueens(6);
     }
 
@@ -48,7 +48,7 @@ public class Number0054 {
     }
 
     boolean isValid(List<String> board, int row, int col) {
-        
+
 
         return false;
     }
