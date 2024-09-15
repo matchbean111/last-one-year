@@ -5,6 +5,7 @@ public class Number0028 {
         String s = "sadbutsad";
         String t = "sad";
         int r = strStrNaive(s, t);
+        System.out.println(r);
     }
 
     public static int strStrNaive(String haystack, String needle) {

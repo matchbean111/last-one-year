@@ -14,13 +14,12 @@ public class Number0435 {
     public int eraseOverlapIntervals(int[][] intervals) {
         Arrays.sort(intervals, Comparator.comparingInt(o -> o[1]));
 
-        int leftMost = intervals[0][0];
-        int rightMost = intervals[0][1];
+    
         for (int[] interval : intervals) {
             System.out.printf("%d %d\n", interval[0], interval[1]);
         }
         int res = 0;
-        int[] temp = intervals[0];
+
         boolean b;
         for (int i = 1; i < intervals.length; i++) {
             b = findOverlap(intervals[i - 1], intervals[i]);

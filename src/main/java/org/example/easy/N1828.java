@@ -25,7 +25,7 @@ public class N1828 {
         for (int i = 0; i < n; i++) {
             // 圆 点 半径
             int[] temp = queries[i];
-            int cx = temp[0], cy = temp[1], cr = temp[2];
+            int cx = temp[0], cy = temp[1];
             for (int j = 0; j < m; j++) {
                 // 判断点在不在圆内
                 int[] p = points[j];

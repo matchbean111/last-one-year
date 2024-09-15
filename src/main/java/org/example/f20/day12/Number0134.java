@@ -12,7 +12,7 @@ public class Number0134 {
         int curGas = 0;
         int n = gas.length;
         int res = Integer.MAX_VALUE;
-        boolean can = false;
+        
         for (int start = 0; start < n; start++) {
             for (int i = start; i < n + start; i++) {
                 int localI = i % (n);
@@ -21,7 +21,7 @@ public class Number0134 {
                     curGas -= cost[localI];
                 } else {
                     curGas -= cost[localI];
-                    can = false;
+                    
                     break;
                 }
             }
